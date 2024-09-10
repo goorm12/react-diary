@@ -10,9 +10,9 @@ import New from "./pages/Home";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={Home} />
-      <Route path="/diary" element={Diary} />
-      <Route path="/new" element={New} />
+      <Route path="/" element={<Home />} />
+      <Route path="/diary" element={<Diary />} />
+      <Route path="/new" element={<New />} />
     </Routes>
   );
 }
