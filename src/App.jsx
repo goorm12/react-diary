@@ -13,9 +13,9 @@ function App() {
   return (
     <>
       <Button
-        text={123}
+        text={"123"}
         onClick={() => {
-          console.log(123);
+          console.log("123");
         }}
       />
 
