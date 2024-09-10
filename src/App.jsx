@@ -5,6 +5,7 @@ import Diary from "./pages/Diary";
 import New from "./pages/New";
 import Notfound from "./pages/Notfound";
 import Button from "./components/Button";
+import Header from "./components/Header";
 
 // 1. "/" : 모든 일기를 조회하는 Home 페이지
 // 2. "/new" : 새로운 일기를 작성하는 New 페이지
@@ -12,11 +13,10 @@ import Button from "./components/Button";
 function App() {
   return (
     <>
-      <Button
-        text={"123"}
-        onClick={() => {
-          console.log("123");
-        }}
+      <Header
+        title={"Header"}
+        leftChild={<Button text={"left"} />}
+        rightChild={<Button text={"right"} />}
       />
 
       <Routes>
