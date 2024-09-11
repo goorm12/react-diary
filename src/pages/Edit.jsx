@@ -10,7 +10,7 @@ const Edit = () => {
   const data = useContext(DiaryStateContext);
   const params = useParams();
   const nav = useNavigate();
-  const [currentDiary, setCurrentDiary] = useState();
+  const [curDiaryItem, setCurDiaryItem] = useState();
 
   useEffect(() => {
     const currentDiaryItem = data.find(
@@ -22,7 +22,7 @@ const Edit = () => {
       nav("/", { replace: true });
     }
 
-    setCurrentDiary(currentDiaryItem);
+    setCurDiaryItem(currentDiaryItem);
   }, [params.id, data]);
 
   const onClickDelete = () => {
@@ -42,7 +42,7 @@ const Edit = () => {
           <Button onClick={onClickDelete} text={"삭제하기"} type={"NEGATIVE"} />
         }
       />
-      <Editor />
+      <Editor initData={curDiaryItem} />
     </div>
   );
 };
